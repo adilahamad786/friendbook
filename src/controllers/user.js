@@ -7,6 +7,7 @@ const { sendAccountVerificationOtpOnEmail, sendForgotPasswordOtpOnEmail } = requ
 const validator = require("validator");
 const ErrorHandler = require("../utils/errorHandler");
 const tryCatch = require("../middleware/tryCatch");
+const sharp = require('sharp');
 
 
 // SEND OTP FOR EMAIL/ACCOUNT VERIFICATION
@@ -194,6 +195,11 @@ exports.update = tryCatch(async (req, res) => {
   // Update profilePicture if provide
   if (req.files?.profilePicture) {
     req.user.profilePicture = req.files.profilePicture[0];
+
+    // Resize profilePicture size and change format as png
+    const buffer = await sharp(req.user.profilePicture.buffer).resize(122,122).png().toBuffer();
+    req.user.profilePicture.buffer = buffer;
+
     req.user.profilePictureUrl =
       `/api/user/profile-picture/${req.user._id}`;
   }
@@ -201,6 +207,11 @@ exports.update = tryCatch(async (req, res) => {
   // Update coverPicture if provide
   if (req.files?.coverPicture) {
     req.user.coverPicture = req.files.coverPicture[0];
+
+    // Resize profilePicture size and change format as png
+    const buffer = await sharp(req.user.coverPicture.buffer).resize(720,160).png().toBuffer();
+    req.user.coverPicture.buffer = buffer;
+
     req.user.coverPictureUrl =
       `/api/user/cover-picture/${req.user._id}`;
   }
@@ -247,6 +258,9 @@ exports.serveUserCoverPicture = tryCatch(async (req, res) => {
 exports.createOrUpdateStroy = tryCatch(async (req, res) => {
   // Create story Url
   const storyUrl = `/api/user/story/${req.user._id}`;
+
+  // Resize story size and change format as png
+  req.file.buffer = await sharp(req.file.buffer).resize(112,160).png().toBuffer();
 
   // Update story
   await User.updateOne({ _id: req.user._id }, { story: req?.file, storyUrl });
@@ -377,7 +391,7 @@ exports.getUserSuggestionUsers = tryCatch(async (req, res) => {
   });
 
   if (suggestionList.length === 0) {
-    suggestionList = await User.find({}, { username: 1, profilePictureUrl: 1 }).limit(5)
+    suggestionList = await User.find({ $nor: [{ $and: [{ _id: req.user._id }] }] }, { username: 1, profilePictureUrl: 1 }).limit(5)
   }
 
   // Send suggestionList as response

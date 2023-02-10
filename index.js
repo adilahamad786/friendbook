@@ -25,12 +25,17 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 app.use(compression());
+app.use(express.static(path.join(__dirname,"./client/build")))
 
 app.use("/api/oauth", googleOAuthRoute);
 app.use("/api/user", userRoute);
 app.use("/api/post", postRoute);
 app.use("/api/comment", commentRoute);
 app.use("/api/like", likeRoute);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname,"./client/build/index.html"))
+});
 
 // Page not found routers
 app.get("/*", (req, res) => {
@@ -39,12 +44,6 @@ app.get("/*", (req, res) => {
 
 // Error handler middleware
 app.use(errorMiddleware);
-
-app.use(express.static(path.join(__dirname,"./client/build")))
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname,"./client/build/index.html"))
-})
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
