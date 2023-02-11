@@ -23,6 +23,14 @@ connectDB()
 // middleware
 app.use(express.json());
 app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data: blob:"]
+    }
+  })
+);
 app.use(morgan("common"));
 app.use(compression());
 app.use(express.static(path.join(__dirname,"./client/build")))
