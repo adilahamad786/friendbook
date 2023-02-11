@@ -12,6 +12,7 @@ const googleOAuthRoute = require('./src/routes/googleOAuth');
 const errorMiddleware = require("./src/middleware/errorMiddleware");
 const connectDB = require("./src/config/database");
 const path = require('path');
+const cors = require('cors');
 
 // Configure environment variables
 dotenv.config();
@@ -22,6 +23,9 @@ connectDB()
 
 // middleware
 app.use(express.json());
+app.use(cors({
+  origin: "*",
+}));
 app.use(helmet());
 app.use(
   helmet.contentSecurityPolicy({
