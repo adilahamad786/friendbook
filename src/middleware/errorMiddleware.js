@@ -3,7 +3,11 @@ const errorMiddleware = (error, req, res, next) => {
     error.message = error.message || "Internal Server Error";
     error.statusCode = error.statusCode || 500;
 
-    console.log(error);
+    if (error.code === "LIMIT_FILE_SIZE") {
+        error.errorType = "bad_request";
+        error.message = "File size is too much, please upload file less than 3MB!";
+        error.statusCode = 400;
+    }
 
     if (error.reason) {
         error.errorType = "bad_request";
