@@ -12,7 +12,6 @@ const googleOAuthRoute = require('./src/routes/googleOAuth');
 const errorMiddleware = require("./src/middleware/errorMiddleware");
 const connectDB = require("./src/config/database");
 const path = require('path');
-const cors = require('cors');
 
 // Configure environment variables
 dotenv.config();
@@ -23,18 +22,14 @@ connectDB()
 
 // middleware
 app.use(express.json());
-app.use(cors({
-  origin: "*",
-}));
 app.use(helmet());
-app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      "img-src": ["'self'", "https: data: blob:"]
-    }
-  })
-);
+app.use(helmet.crossOriginEmbedderPolicy({ policy: "credentialless" }));
+app.use(helmet.contentSecurityPolicy({
+  useDefaults: true,
+  directives: {
+    imgSrc: ["'self'", "https://avatars.githubusercontent.com", "https: data: blob:"]
+  }
+}));
 app.use(morgan("common"));
 app.use(compression());
 app.use(express.static(path.join(__dirname,"./client/build")))
