@@ -291,8 +291,11 @@ exports.getAllTimelineStory = tryCatch(async (req, res) => {
   const currentUser = await req.user
     .populate({ path: "followers followings", select: "_id username storyUrl"});
 
-  // store all stories
+  // store all friends stories
   let stories = [...currentUser.followers, ...currentUser.followings];
+
+  // Remove friend, if don't have story
+  stories = stories.filter(story => !!story.storyUrl);
 
   // Remove duplicate story
   stories = [...stories.reduce( (map, story) => map.set(story._id.toString(), story), new Map()).values()];
