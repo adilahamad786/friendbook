@@ -15,7 +15,7 @@ const path = require('path');
 
 // Configure environment variables
 dotenv.config();
-const port = process.env.PORT || 8800;
+const port = process.env.PORT;
 
 // Connect with database
 connectDB()
