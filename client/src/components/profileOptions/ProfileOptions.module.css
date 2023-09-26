@@ -1,0 +1,30 @@
+.profileOptions {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2rem;
+    background-color: var(--bgSoft);
+    width: 5rem;
+    padding: 0.5rem 0.2rem;
+    gap: 0.2rem;
+    border: 0.5px solid grey;
+}
+
+.profileOptionButton {
+    width: 100%;
+}
+
+.profileOptionButton {
+    padding: 0.2rem 0.3rem;
+    border: 0.1rem solid grey;
+    background-color: var(--bg);
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+.profileOptionButton:hover {
+    background-color: #1775ee;
+}
+
+.logoutButton:hover {
+    background-color: red;
+}

@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  background-color: #1775ee;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.removed {
+  background-color: red;
+  color: black;
+}
+
+

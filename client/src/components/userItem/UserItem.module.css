@@ -1,0 +1,14 @@
+.userInfo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.5rem;
+  flex: 5;
+  text-decoration: none;
+}
+
+.userInfo span {
+  font-size: 14px;
+  flex: 1;
+  color: var(--textColor);
+}

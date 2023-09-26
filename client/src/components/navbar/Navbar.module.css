@@ -1,0 +1,241 @@
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    height: 2rem;
+    width: 100vw;
+    padding: 1.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--bg);
+    color: var(--textColor);
+    z-index: 40;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--logo);
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+}
+
+.homeIconLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.themeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid var(--border);
+    padding-left: 0.5rem;
+    border-radius: 1rem;
+    width: 45%;
+    position: relative;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: var(--textColor);
+}
+
+.searchResult {
+    position: fixed;
+    width: 30vw;
+    max-height: 40vh;
+    overflow-y: scroll;
+    top: 3rem;
+    left: 15rem;
+    border-radius: 0.2rem;
+    z-index: 32;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile span {
+    font-size: 0.9rem;
+}
+
+.menuIcon {
+    display: none;
+}
+
+.profileOptionsMenu {
+    position: absolute;
+    top: 2.3rem;
+    right: 1rem;
+    z-index: 30;
+}
+
+
+
+@media screen and (max-width : 1000px) {
+    .searchResult {
+        left: 13rem;
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width : 750px) {
+    .left {
+        width: 100%;
+        gap: 1.5rem;
+    }
+    .right {
+        display: none;
+        width: 100%;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--border);
+        padding-left: 0.5rem;
+        border-radius: 1rem;
+        width: 100%;
+    }
+    
+    .search input {
+        border: none;
+        outline: none;
+        width: 100%;
+        border-radius: 1rem;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: var(--textColor);
+    }
+
+    .searchResult {
+        left: 15rem;
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .menuIcon {
+        display: flex;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .searchResult {
+        left: 14rem;
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width : 460px) {   
+    .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    .logo {
+        text-decoration: none;
+        color: var(--logo);
+        font-weight: 500;
+        font-size: 1.1rem;
+        letter-spacing: 0.2px;
+    }
+    
+    .search {
+        width: auto;
+        border: none;
+    }
+
+    .searchField {
+        position: fixed;
+        top: 4rem;
+        left: 10vw !important;
+        width: 80vw !important;
+        z-index: 50;
+        border: 0.1rem solid var(--textColor) !important;
+        background-color: var(--bgSoft) !important;
+        color: var(--textColor) !important;
+        padding-left: 1rem !important;
+    }
+
+    .searchResult {
+        top: 5rem;
+        left: 15vw;
+        width: 70vw;
+    }
+    
+    .right {
+        display: none;
+        width: 100%;
+    }
+    
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 15px;
+    }
+    
+    .profile img {
+        width: 2rem;
+        border-radius: 50%;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .searchResult {
+        left: 10vw;
+        width: 80vw;
+    }
+}

@@ -1,0 +1,169 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--bg);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+}
+
+.user {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--textColor);
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.time {
+    font-size: 0.75rem;
+    color: var(--textColorSoft);
+}
+
+.menu {
+    cursor: pointer;
+    position: relative;
+}
+
+.postUpdate {
+    position: fixed;
+    top: calc(50vh - 10rem);
+    left: calc(50vw - 12rem);
+    z-index: 30;
+}
+
+.message {
+    padding-top: 0.7rem;
+    font-size: 0.85rem;
+    color: var(--textColorSoft);
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.postImage {
+    width: 100%;
+    max-height: 40rem;
+    object-fit: cover;
+    padding: 0.5rem 0rem;
+}
+
+.skeletonImage {
+    width: 100%;
+    height: 25rem;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    gap: 1rem;
+    color: var(--textColorSoft);
+}
+
+.option, .skeletonOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.skeletonOption {
+    width: 6rem;
+    height: 1.5rem;
+}
+
+.skeletonContainer {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width : 1100px) {
+    .skeletonImage {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width : 850px) {
+    .postUpdate {
+        left: calc(50vw - 3rem);
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .postUpdate {
+        left: calc(50vw - 8rem);
+    }
+}
+
+@media screen and (max-width : 380px) {
+    .options {
+        padding: 0rem;
+        margin: 0rem;
+    }
+
+    .option {
+        display: flex;
+        font-size: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .option .optionIcon {
+        font-size: 1.2rem;
+    }
+
+    .option span {
+        font-size: 0.8rem;
+    }
+
+    .skeletonImage {
+        height: 15rem;
+    }
+
+    .skeletonOption {
+        width: 4rem;
+        height: 1rem;
+    }
+    .skeletonOption .item{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 320px) {
+    .options {
+        justify-content: space-evenly;
+    }
+
+    .option {
+        flex-direction: column;
+    }
+
+    .option span {
+        margin-top: -0.4rem;
+    }
+
+    .skeletonImage {
+        height: 10rem;
+    }
+}

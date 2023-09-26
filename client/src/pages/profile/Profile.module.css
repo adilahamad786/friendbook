@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  gap: 0.5rem;
+  background-color: var(--bgSoft);
+}
+
+.friendSection {
+  padding-top: 0.5rem;
+  width: 95%;
+}
+
+.noFriend {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  color: var(--textColor);
+}
+
+@media screen and (max-width : 850px) {
+  .container {
+    width: 70%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hide {
+    display: none;
+  }
+}

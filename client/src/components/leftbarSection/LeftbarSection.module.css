@@ -1,0 +1,113 @@
+.leftbarSection {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: calc(100vh - 3rem);
+  position: sticky;
+  top: 3rem;
+  overflow: scroll;
+  background-color: var(--bg);
+  color: var(--textColor);
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.container hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border);
+  margin: 0.5rem 0rem;
+}
+
+.title {
+  color: grey;
+  font-size: 14px;
+  padding: 0.5rem 0rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.item img {
+  width: 2rem;
+}
+
+.username {
+  margin-left: -0.5rem;
+  font-size: 0.9rem;
+}
+
+.profilePicture img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin: 0rem;
+  object-fit: cover;
+}
+
+.showProfileOptions {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  z-index: 30;
+}
+
+.friends {
+  display: none;
+}
+
+@media screen and (max-width : 850px) {
+  .leftbarSection {
+    width: 30%;
+    min-width: 15rem;
+  }
+
+  .friends {
+    display: flex;
+    position: relative;
+    left: -1rem;
+    width: 15rem;
+    z-index: 30;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .leftbarSection {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+    width: 100%;
+  }
+
+  .friends {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width : 320px) {
+  .friends {
+    width: 100vw;
+  }
+}

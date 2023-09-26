@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    background-color: var(--bg);
+    padding: 2rem;
+    padding-top: 0rem;
+    color: var(--textColor);
+}
+
+.item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.title {
+    font-weight: 600;
+}
+
+@media screen and (max-width : 420px) {
+    .container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

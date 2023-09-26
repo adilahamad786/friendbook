@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.theme-light {
+  --textColor: #000;
+  --bg: white;
+  --logo: #1775ee;
+  --bgSoft: #f6f3f3;
+  --textColorSoft: #555;
+  --border: lightgray;
+}
+
+.theme-dark {
+  --textColor: #f5f5f5;
+  --bg: #222;
+  --logo: white;
+  --bgSoft: #333;
+  --textColorSoft: lightgray;
+  --border: #444;
+}

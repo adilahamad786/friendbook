@@ -1,0 +1,45 @@
+.postOptions {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1.5rem;
+    left: -3rem;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    z-index: 30;
+}
+
+.closeOptionButton {
+    border: none;
+    width: 100%;
+    align-self: flex-end;
+    padding: 0rem;
+    margin: 0rem;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    cursor: pointer;
+}
+
+.closeOptionButton:hover {
+    background-color: red;
+}
+
+.closeOption {
+    font-size: small;
+    padding: 0.2rem;
+    margin: 0rem;
+}
+
+.optionButton {
+    padding: 0.2rem 0.3rem;
+    border: none;
+    background-color: var(--bgSoft);
+    color: var(--textSoft);
+    cursor: pointer;
+}
+
+.optionButton:hover {
+    background-color: #1775ee;
+}

@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--bg);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+  display: relative;
+  gap: 0.5rem;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--textColor);
+}
+
+.preview img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.postForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.postForm input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background-color: transparent;
+    color: var(--textColor);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.postForm input[type="file"] {
+    display: none;
+}
+
+.postForm button {
+    border: none;
+    background-color: transparent;
+    color: #1775ee;
+    padding: 0.5rem;
+    position: relative;
+    top: 0.5rem;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--textColor);
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.option span {
+    font-size: 0.7rem;
+}
+
+.icon img {
+    width: 1.3rem;
+    height: 1.3rem;
+}

@@ -1,0 +1,222 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--bgSoft);
+    color: var(--textColor);
+}
+
+.topSection {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.coverPictureChange {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.coverPictureChangeLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+    color : darkgray;
+}
+
+.profileCoverImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.profilePictureChange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    border: 0.2rem solid var(--bgSoft);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 5rem;
+}
+
+.profilePictureUpdateLabel {
+    position: absolute;
+    color: darkgray;
+}
+
+.profileUserImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userProfileName {
+    position: relative;
+    margin-top: 3.2rem;
+    font-size: 1.2rem;
+}
+
+.userProfileDescription {
+    position: relative;
+    margin-top: 0.2rem;
+    align-self: center;
+    font-size: 1rem;
+}
+
+.formSection {
+    margin: 1.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: var(--bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.formTitle {
+    margin: 0.5rem;
+}
+
+.fieldInputBox {
+    display: flex;
+    align-items: center;
+    background-color: var(--bgSoft);
+    width: 80%;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.radioContainer {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+}
+
+.radioContainer .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.inputLabel {
+    padding: 0.2rem 0.3rem;
+    cursor: pointer;
+}
+
+.formInput {
+    border: none;
+    width: 80%;
+    padding: 0.3rem;
+    border: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    background-color: transparent;
+    color: var(--textColorSoft);
+    outline: none;
+    flex: 4;
+}
+
+.container button {
+    font-size: 0.8rem;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: var(--textColor);
+    border: none;
+}
+
+.formUpdateButton {
+    background-color: #1775ee;
+}
+
+.discartButtonLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+.discartButton {
+    margin-top: 0.5rem;
+    background-color: red;
+}
+
+@media screen and (max-width : 850px) {
+    .container {
+      width: 70%;
+      padding: 0rem;
+      margin: 0rem;
+    }
+
+    .formContainer {
+        width: 85%;
+        padding: 1rem 0rem;
+    }
+
+    .fieldInputBox {
+        width: 90%;
+        margin: 0rem;
+    }
+
+    .container button {
+        width: 90%;
+    }
+  }
+  
+  @media screen and (max-width : 600px) {
+    .container {
+      width: 100%;
+    }
+
+    .formContainer {
+        width: 95%;
+        padding: 1rem 0rem;
+    }
+
+    .hide {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width : 430px) {
+    .fieldInputBox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .radioContainer .item {
+        padding-left: 0.3rem;
+    }
+  }

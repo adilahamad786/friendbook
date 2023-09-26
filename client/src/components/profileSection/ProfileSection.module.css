@@ -1,0 +1,129 @@
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-start;
+  width: 100%;
+}
+  
+.coverPicture {
+  width: 100%;
+  object-fit: cover;
+}
+
+.coverPicture img {
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 0.2rem;
+  object-fit: cover;
+}
+
+.profilePicture {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 6rem;
+  border: 0.2rem solid var(--bg);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  width: 100%;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.icons {
+  text-decoration: none;
+  color: var(--textColorSoft);
+}
+
+.center {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.username {
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 1.5rem;
+  color: var(--textColor);
+}
+
+.userDescription {
+  margin-top: -0.2rem;
+  color: var(--textColor);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  gap: 1rem;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width : 460px) {
+  .about {
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    padding: 0rem 1rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .center {
+    order: 1;
+    align-self: center;
+    padding-top: 1rem;
+    margin-top: 3.5rem;
+  }
+  .left {
+    order: 2;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .right {
+    order: 3;
+    align-self: center;
+    margin-bottom: 1rem;
+    gap: 2rem;
+  }
+}
+

@@ -1,0 +1,35 @@
+.addComment {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    gap: 0.5rem;
+}
+
+.profilePicture {
+    flex: 1;
+}
+
+.commentForm {
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+
+.commentForm input[type="text"] {
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    color: var(--textColor);
+    background-color: transparent;
+    padding: 0rem 1rem;
+    outline-color: var(--textColor);
+}
+
+.commentForm button {
+    border: none;
+    background-color: transparent;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    color: #1775ee;
+}

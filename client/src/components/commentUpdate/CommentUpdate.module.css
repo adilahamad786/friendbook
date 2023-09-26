@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--bg);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    width: 20rem;
+}
+
+.container button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+    background-color: red;
+}
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.updateForm button {
+    background-color: blue;
+}
+
+.updateForm button:disabled {
+    background-color: rgba(78, 78, 150, 0.774);
+    color: lightblue;
+    cursor: not-allowed;
+}
+
+.textInput {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--textColorSoft);
+    outline: none;
+    color: var(--textColor);
+    background-color: var(--bgSoft);
+}

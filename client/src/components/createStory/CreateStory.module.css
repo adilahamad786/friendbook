@@ -1,0 +1,43 @@
+.createStory {
+    display: flex;
+    flex-direction: column;
+    min-width: 7rem;
+    max-width: 7rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.createStory img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+}
+
+.createStory span {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.createStory input {
+    display: none;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2rem;
+    left: 0.5rem;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #1775ee;
+    border-radius: 50%;
+    cursor: pointer;
+}

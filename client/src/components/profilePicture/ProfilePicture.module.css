@@ -1,0 +1,15 @@
+.profile {
+  align-self: flex-start;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@media screen and (max-width : 350px) {
+  .profile {
+    width : 2.2rem;
+    height : 2.2rem;
+  }
+}
