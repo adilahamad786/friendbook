@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.3rem 0rem;
+  height: 4rem;
 }
 
 .userInfo {
@@ -35,7 +35,7 @@
 
 .time {
   font-size: 0.7rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .menu {
@@ -52,7 +52,7 @@
 
 .options {
   position: relative;
-  top: 1rem;
+  top: 0.5rem;
 }
 
 .commentUpdate {
